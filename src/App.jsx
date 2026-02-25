@@ -1,17 +1,9 @@
-const App = () =>{
-  const tasks=[
-    ' Погладить кота',
-    'Приготовить салат',
-    'Посмотреть видео react',   
-  ]
-  return(
-  <>
-  <h1>ffff</h1>
-  <ul>  
-    {tasks.map((task)=><li key={task}>{task}</li>)}
-  </ul>
-  </>
-
+import Todo from "./components/Todo"
+const Hello=()=><h1>Hello!</h1>
+const App = () => {
+  return (
+    <Todo />
   )
 }
+
 export default App
