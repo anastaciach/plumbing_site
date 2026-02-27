@@ -1,7 +1,11 @@
-document.querySelector(".todo__delete-all-button")
-document.addEventListener('click',()=>console.log("Клик!"))
+// document.querySelector(".todo__delete-all-button")
+// document.addEventListener('click',()=>console.log("Клик!"))
 const todoInfo = (props) => {
-  const { total, done } = props;
+  const { 
+    total,
+     done,
+     onDeleteAllButtonClick,
+     } = props;
   const hasTask = total > 0;
   return (
     <div className="todo__info">
@@ -9,7 +13,11 @@ const todoInfo = (props) => {
         Done: {done} from {total}
       </div>
       {hasTask && (
-        <button className="todo__delete-all-button" type="button">
+        <button 
+        className="todo__delete-all-button" 
+        type="button"
+        onClick={onDeleteAllButtonClick}
+>
           Delete all
         </button>
       )}

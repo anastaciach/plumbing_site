@@ -1,8 +1,11 @@
 const Field = (props) => {
   const { 
     className = "",
-    id, label, 
-    type = "String" }=props;
+    id,
+    label,
+    type = "String",
+    onInput,
+  }=props;
 
   return (
     <div className={`field ${className}`}>
@@ -15,6 +18,7 @@ const Field = (props) => {
         placeholder=" "
         autoComplete="off"
         type={type}
+        onInput={onInput}
       />
     </div>
   );
